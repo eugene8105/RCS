@@ -1,9 +1,6 @@
-﻿
-<!-- This file is for internal use only.-->
-
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <RCS_Config>
-  <Controller_ID>2005.552</Controller_ID>
+  <Controller_ID>2600-104546</Controller_ID>
   <System_Location>Autobahn</System_Location>
   <Number_Subscribers>1</Number_Subscribers>
   <subscriber_Email_Address>first@email.com</subscriber_Email_Address>

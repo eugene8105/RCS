@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RCS_Main_APP.Interfaces;
-using RCS_Main_APP.Presenter;
-using RCS_Main_APP.Data;
-using RCS_Main_APP.Models;
+﻿using RCS_Main_APP.Interfaces;
 
 namespace RCS_Main_APP.View
 {
     class SupportRequesView : ISupportRequestView
     {
-        SettingsConfigureModel scm = new SettingsConfigureModel();
         public string StreetName { get; set; }
         public string RobSupportText { get; set; } 
         public string R4SupportText { get; set; }
@@ -21,11 +12,11 @@ namespace RCS_Main_APP.View
 
         public SupportRequesView()
         {
-            foreach (var i in scm.cd)
+            foreach (var i in Utilities.cd)
             {
-                StreetName = i.LocationName;
-                WebHookR4Support = i.WebHookR4Support;
-                WebHookRobotSupport = i.WebHookRobotSupport;
+                StreetName = i.System_Location;
+                WebHookR4Support = i.R4_hook;
+                WebHookRobotSupport = i.Robot_Support_hook;
             }
             //StreetName = "Autobahn";
             RobSupportText = $"{StreetName} is requested robot support!";

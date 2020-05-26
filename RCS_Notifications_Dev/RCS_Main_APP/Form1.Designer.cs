@@ -38,6 +38,7 @@ namespace RCS_Main_APP
             this.txCntConnected = new System.Windows.Forms.TextBox();
             this.txMainTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStopMonitoring = new System.Windows.Forms.Button();
             this.btnStartMonitoring = new System.Windows.Forms.Button();
             this.btnRobotSupport = new System.Windows.Forms.Button();
             this.btnR4Support = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@ namespace RCS_Main_APP
             this.lblMinimize = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
             this.lblRcsMain = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnMainAll.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,7 +125,7 @@ namespace RCS_Main_APP
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnStopMonitoring);
             this.panel1.Controls.Add(this.btnStartMonitoring);
             this.panel1.Controls.Add(this.btnRobotSupport);
             this.panel1.Controls.Add(this.btnR4Support);
@@ -133,6 +133,21 @@ namespace RCS_Main_APP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 368);
             this.panel1.TabIndex = 9;
+            // 
+            // btnStopMonitoring
+            // 
+            this.btnStopMonitoring.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStopMonitoring.BackColor = System.Drawing.Color.Green;
+            this.btnStopMonitoring.FlatAppearance.BorderSize = 0;
+            this.btnStopMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStopMonitoring.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopMonitoring.ForeColor = System.Drawing.Color.Black;
+            this.btnStopMonitoring.Location = new System.Drawing.Point(9, 313);
+            this.btnStopMonitoring.Name = "btnStopMonitoring";
+            this.btnStopMonitoring.Size = new System.Drawing.Size(265, 40);
+            this.btnStopMonitoring.TabIndex = 11;
+            this.btnStopMonitoring.Text = "Stop - Monitoring is Off";
+            this.btnStopMonitoring.UseVisualStyleBackColor = false;
             // 
             // btnStartMonitoring
             // 
@@ -144,9 +159,9 @@ namespace RCS_Main_APP
             this.btnStartMonitoring.ForeColor = System.Drawing.Color.Black;
             this.btnStartMonitoring.Location = new System.Drawing.Point(9, 259);
             this.btnStartMonitoring.Name = "btnStartMonitoring";
-            this.btnStartMonitoring.Size = new System.Drawing.Size(197, 39);
+            this.btnStartMonitoring.Size = new System.Drawing.Size(265, 40);
             this.btnStartMonitoring.TabIndex = 5;
-            this.btnStartMonitoring.Text = "Monitoring is On";
+            this.btnStartMonitoring.Text = "Start - Monitoring is On";
             this.btnStartMonitoring.UseVisualStyleBackColor = false;
             this.btnStartMonitoring.Click += new System.EventHandler(this.btnStartMonitoring_Click);
             // 
@@ -240,21 +255,6 @@ namespace RCS_Main_APP
             this.lblRcsMain.TabIndex = 0;
             this.lblRcsMain.Text = "RCS";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(9, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Monitoring is Off";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,7 +299,7 @@ namespace RCS_Main_APP
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txCntConnected;
         private System.Windows.Forms.TextBox txMainTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStopMonitoring;
     }
 }
 

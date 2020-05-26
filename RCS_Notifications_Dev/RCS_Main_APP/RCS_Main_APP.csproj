@@ -160,15 +160,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IXMLConfigFileTags.cs" />
     <Compile Include="Interfaces\IXMLControllerLogTags.cs" />
     <Compile Include="Interfaces\IMonitoringModel.cs" />
     <Compile Include="Interfaces\IXmlTags.cs" />
-    <Compile Include="Interfaces\ISettingsConfig.cs" />
-    <Compile Include="Interfaces\IControllerModel.cs" />
     <Compile Include="Interfaces\ISupportRequesModel.cs" />
     <Compile Include="Interfaces\ISupportRequestView.cs" />
     <Compile Include="Models\MonitoringModel.cs" />
-    <Compile Include="Models\SettingsConfigureModel.cs" />
     <Compile Include="Models\SupportRequestModel.cs" />
     <Compile Include="Presenter\ControllerPresenter.cs" />
     <Compile Include="Presenter\EventHandlerPresenter.cs" />
@@ -176,8 +174,8 @@
     <Compile Include="RCS_Starter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\IMainSetup.cs" />
+    <Compile Include="Utilities.cs" />
     <Compile Include="View\SupportRequesView.cs" />
-    <Compile Include="XmlTags.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

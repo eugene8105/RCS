@@ -2,20 +2,15 @@
 
 namespace RCS_Main_APP.Data
 {
-    class ConfigData : ISettingsConfig
+    class ConfigData : IXMLConfigFileTags
     {
-        public string FullPath { get; set; }
-        public string BackupPath { get; set; }
-        public string CntrID { get; set; }
-        public string SaveToPath { get; set; }
-        public string LoadFromPath { get; set; }
-        public string PartDataPth { get; set; }
-        public string LocationName { get; set; }
-        public string[] EmailSubscribers { get; set; }
-        public string NumOfSubscribers { get; set; }
-        public string WebHookRobotSupport { get; set; }
-        public string WebHookR4Support { get; set; }
-        public string RCSEmailAddress { get; set; }
-        public string RCSEmailPass { get; set; }
+        public string Controller_ID { get; set; }
+        public string System_Location { get; set; }
+        public int Number_Subscribers { get; set; }
+        public string[] subscriber_Email_Address { get; set; }
+        public string R4_hook { get; set; }
+        public string Robot_Support_hook { get; set; }
+        public string RCS_Email_Domain { get; set; }
+        public string RCS_Email_Password { get; set; }
     }
 }

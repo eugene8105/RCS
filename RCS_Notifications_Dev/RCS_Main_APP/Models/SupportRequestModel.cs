@@ -9,7 +9,7 @@ using SlackBotMessages.Models;
 
 namespace RCS_Main_APP.Models
 {
-    class SupportRequestModel : SettingsConfigureModel, ISupportRequesModel
+    class SupportRequestModel : ISupportRequesModel
     {
         public string WebHookR4Support { get; set; }
 

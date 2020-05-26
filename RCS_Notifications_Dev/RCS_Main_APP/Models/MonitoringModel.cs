@@ -15,7 +15,6 @@ namespace RCS_Main_APP.Models
     class MonitoringModel : IMonitoringModel, IXMLControllerLogTags, IXmlTags
     {
         Logger logger = null;
-        SettingsConfigureModel scm = new SettingsConfigureModel();
         /// <summary>
         /// SmtpClient - it's a class - Simple Mail Transfer Protocol (SMTP) class
         /// </summary>
@@ -58,9 +57,9 @@ namespace RCS_Main_APP.Models
         string emailSubscribersString;
         public bool EmailSetup()
         {
-            foreach (var i in scm.cd)
+            foreach (var i in Utilities.cd)
             {
-                emailSubscribersString = i.EmailSubscribers[0];
+                emailSubscribersString = i.subscriber_Email_Address[0];
             }
             try
             {
@@ -87,13 +86,13 @@ namespace RCS_Main_APP.Models
             Message = $"{ErrorTime} \n{ErrorCode}: {TagTitle}\n\n{TagDescription} \n{EmailBody}";
 
             MailMessage msg = new MailMessage();
-            foreach (var item in scm.cd)
+            foreach (var item in Utilities.cd)
             {
-                EmailAddress = item.RCSEmailAddress;
-                Password = item.RCSEmailPass;
-                for (int i = 0; i < item.EmailSubscribers.Length; i++)
+                EmailAddress = item.RCS_Email_Domain;
+                Password = item.RCS_Email_Password;
+                for (int i = 0; i < item.subscriber_Email_Address.Length; i++)
                 {
-                    msg.To.Add(new MailAddress(item.EmailSubscribers[i]));
+                    msg.To.Add(new MailAddress(item.subscriber_Email_Address[i]));
                 }
             }
             msg.Subject = $"{StreetName} - {ErrorTime} - {Title}";
@@ -114,21 +113,15 @@ namespace RCS_Main_APP.Models
         //List<IXmlTags> tags;
         public void XmlEditor(string xmlText)
         {
-            //tags = new List<IXmlTags>();
-
             var doc = new XmlDocument();
             doc.LoadXml(xmlText);
 
-            //tags.Add(new XmlTags
-            //{
             TagTitle = doc.GetElementsByTagName("Title")[0].InnerText;
             TagDescription = doc.GetElementsByTagName("Description")[0].InnerText;
             TagConsequences = doc.GetElementsByTagName("Consequences")[0].InnerText;
             TagCauses = doc.GetElementsByTagName("Causes")[0].InnerText;
             TagActions = doc.GetElementsByTagName("Actions")[0].InnerText.Split(')');
-            //});
-            //ListScaner();
-        }
+        } // end of XmlEditor method
         public void OutlookMail()
         {
             client = new SmtpClient(hostName, port);
@@ -137,20 +130,20 @@ namespace RCS_Main_APP.Models
             EmailSubject = $"{StreetName} - {ErrorTime} - {TagTitle}";
             Message = $"{ErrorTime} \n{ErrorCode}: {TagTitle}\n\n{TagDescription} \n{EmailBody}";
             // Add a recipient.
-            foreach (var item in scm.cd)
+            foreach (var item in Utilities.cd)
             {
-                EmailAddress = item.RCSEmailPass;
-                Password = item.RCSEmailPass;
-                for (int i = 0; i < item.EmailSubscribers.Length; i++)
+                EmailAddress = item.RCS_Email_Domain;
+                Password = item.RCS_Email_Password;
+                for (int i = 0; i < item.subscriber_Email_Address.Length; i++)
                 {
                     if (Recipients != null)
                     {
                         Recipients += ";";
                     }
-                    Recipients += $"{item.EmailSubscribers[i]}";
+                    Recipients += $"{item.subscriber_Email_Address[i]}";
                 }
                 
-                StreetName = item.LocationName;
+                StreetName = item.System_Location;
             }
             client.Send(EmailAddress, Recipients, EmailSubject, Message);
             EmailSuccess = true;

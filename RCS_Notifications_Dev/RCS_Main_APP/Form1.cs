@@ -4,10 +4,7 @@ using System.Windows.Forms;
 using RCS_Main_APP.View;
 using RCS_Main_APP.Presenter;
 using System.Drawing;
-using ABB.Robotics.Controllers;
 using RCS_Main_APP.Interfaces;
-using System.Threading;
-using ABB.Robotics;
 
 namespace RCS_Main_APP
 {
@@ -18,10 +15,6 @@ namespace RCS_Main_APP
         /// Setup location of the Log file inside of NLog.config - C:\Eugene\GIT_Work\RCS_Project
         /// </summary>
         Logger logger = NLog.Web.NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
-        /// <summary>
-        /// Making instance of ControllerPresenter. ControllerPresenter using IControllerModel interface
-        /// </summary>
-        ControllerPresenter controllerPres = new ControllerPresenter();
 
         EventHandlerPresenter ehp = new EventHandlerPresenter();
         
@@ -52,7 +45,7 @@ namespace RCS_Main_APP
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            controllerPres.SetConfig();
+            ControllerPresenter.ControllerSetUp();
             this.TopMost = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog; // no borders - set for none. With border - FixedSingle
             //this.WindowState = FormWindowState.Maximized;
@@ -65,7 +58,7 @@ namespace RCS_Main_APP
         /// </summary>
         public void ControllerOnNetworkOutputOnMain()
         {
-            if (controllerPres.CntPresent == true)
+            if (ControllerPresenter.CntPresent == true)
             {
                 MainLblControllerInfo = "Found controller on the network!";
                 lblMainControllerAvb.Text = MainLblControllerInfo;
@@ -159,9 +152,10 @@ namespace RCS_Main_APP
             if (ehp.monitoringRunning)
             {
                 btnStartMonitoring.BackColor = Color.Green;
-                btnStartMonitoring.Text = "Monitoring is running.";
+                //btnStartMonitoring.Text = "Monitoring is running.";
                 txCntConnected.Text = "Monitoring process is started.";
                 txMainTextBox.Text = $"{newLine}Output from Monitoring Process";
+                btnStopMonitoring.BackColor = Color.Red;
             }
             else
             {

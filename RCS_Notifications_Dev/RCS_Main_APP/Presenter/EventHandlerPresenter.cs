@@ -1,14 +1,8 @@
 ﻿using ABB.Robotics.Controllers.EventLogDomain;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RCS_Main_APP.Models;
 using ABB.Robotics.Controllers;
 using ABB.Robotics.Controllers.RapidDomain;
-using System.Xml;
-using System.IO;
 using NLog;
 
 namespace RCS_Main_APP.Presenter
@@ -18,19 +12,18 @@ namespace RCS_Main_APP.Presenter
         Logger logger = null;
 
         public bool monitoringRunning = false;
-        ControllerPresenter cp = new ControllerPresenter();
         MonitoringModel mm = new MonitoringModel();
         public void ProcessMonitoring()
         {
-            cp.ControllerSetUp();
-            if (cp.Successful)
+            //ControllerPresenter.ControllerSetUp();
+            if (ControllerPresenter.Successful)
             {
                 monitoringRunning = true;
-                cp.Cntr.EventLog.MessageWritten += _errorEventHappened;
-                cp.Cntr.ConnectionChanged += new EventHandler<ConnectionChangedEventArgs>(ConnectionChanged);
-                cp.Cntr.OperatingModeChanged += _ctrl_OperatingModeChanged;
-                cp.Cntr.StateChanged += _ctrl_StateChanged;
-                cp.Cntr.Rapid.ExecutionStatusChanged += Rapid_ExecutionStatusChanged;
+                ControllerPresenter.Cntr.EventLog.MessageWritten += _errorEventHappened;
+                ControllerPresenter.Cntr.ConnectionChanged += new EventHandler<ConnectionChangedEventArgs>(ConnectionChanged);
+                ControllerPresenter.Cntr.OperatingModeChanged += _ctrl_OperatingModeChanged;
+                ControllerPresenter.Cntr.StateChanged += _ctrl_StateChanged;
+                ControllerPresenter.Cntr.Rapid.ExecutionStatusChanged += Rapid_ExecutionStatusChanged;
             }
             else
             {
@@ -56,7 +49,7 @@ namespace RCS_Main_APP.Presenter
         }
         public void ConnectionChanged(object sender, EventArgs e)
         {
-            if (cp.Cntr.Connected == true)
+            if (ControllerPresenter.Cntr.Connected == true)
             {
                 //btConnect.BackColor = Color.Green;
             }
@@ -70,7 +63,7 @@ namespace RCS_Main_APP.Presenter
         {
             var tempOutput = e.Message;
             //if (cp.Cntr.OperatingMode.ToString() == "Auto")
-            if ((e.Message.Type.ToString() == "Error") && (cp.Cntr.OperatingMode.ToString() == "Auto"))
+            if ((e.Message.Type.ToString() == "Error") && (ControllerPresenter.Cntr.OperatingMode.ToString() == "Auto"))
             {
                 //mm.Description = "Description";
                 mm.ErrorCode = tempOutput.Number.ToString();

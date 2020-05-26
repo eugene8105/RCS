@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RCS_Main_APP.Interfaces
 {
+    /// <summary>
+    /// IXmlTags 
+    /// </summary>
     interface IXmlTags
     {
         string TagTitle { get; set; }
