@@ -1,0 +1,14 @@
+﻿
+<!-- This file is for internal use only.-->
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<RCS_Config>
+  <Controller_ID>2005.552</Controller_ID>
+  <System_Location>Autobahn</System_Location>
+  <Number_Subscribers>1</Number_Subscribers>
+  <subscriber_Email_Address>first@email.com</subscriber_Email_Address>
+  <R4_hook>R4 hook</R4_hook>
+  <Robot_Support_hook>Support hook</Robot_Support_hook>
+  <RCS_Email_Domain>rcsEmailDomain@email.com</RCS_Email_Domain>
+  <RCS_Email_Password>Password of email</RCS_Email_Password>
+</RCS_Config>
