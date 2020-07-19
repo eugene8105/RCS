@@ -23,6 +23,8 @@ namespace RCS_Main_APP.Presenter
         static public bool SetConfigSuccessful { get; set; } = false;
         static string controllerId = "";
 
+        static public bool monitoringRunning = false;
+
         static ControllerPresenter()
         {
             logger = NLog.Web.NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
@@ -109,8 +111,17 @@ namespace RCS_Main_APP.Presenter
         /// <returns></returns>
         static public void DisableController()
         {
-            Cntr.Dispose();
-            Cntr = null;
+            try
+            {
+                Cntr.Dispose();
+                Cntr = null;
+                monitoringRunning = false;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Problem with Dispose method inside of ControllerPresenter class");
+            }
+            
         }
         /// <summary>
         /// Will check before connecting to the controller if controller is active and if it's active it will AbbELog off from this controller and will dispose that controller. 

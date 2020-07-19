@@ -64,26 +64,29 @@ namespace RCS_Main_APP
             this.pnMainAll.Controls.Add(this.panel2);
             this.pnMainAll.Controls.Add(this.panel1);
             this.pnMainAll.Controls.Add(this.pnlMainTop);
-            this.pnMainAll.Location = new System.Drawing.Point(12, 12);
+            this.pnMainAll.Location = new System.Drawing.Point(9, 10);
+            this.pnMainAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnMainAll.Name = "pnMainAll";
-            this.pnMainAll.Size = new System.Drawing.Size(981, 501);
+            this.pnMainAll.Size = new System.Drawing.Size(736, 407);
             this.pnMainAll.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.lblMainControllerAvb);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 448);
+            this.panel3.Location = new System.Drawing.Point(0, 364);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(981, 53);
+            this.panel3.Size = new System.Drawing.Size(736, 43);
             this.panel3.TabIndex = 12;
             // 
             // lblMainControllerAvb
             // 
             this.lblMainControllerAvb.AutoSize = true;
-            this.lblMainControllerAvb.Location = new System.Drawing.Point(402, 16);
+            this.lblMainControllerAvb.Location = new System.Drawing.Point(302, 13);
+            this.lblMainControllerAvb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMainControllerAvb.Name = "lblMainControllerAvb";
-            this.lblMainControllerAvb.Size = new System.Drawing.Size(193, 17);
+            this.lblMainControllerAvb.Size = new System.Drawing.Size(146, 13);
             this.lblMainControllerAvb.TabIndex = 2;
             this.lblMainControllerAvb.Text = "No controllers on the network";
             // 
@@ -91,9 +94,10 @@ namespace RCS_Main_APP
             // 
             this.panel2.Controls.Add(this.txCntConnected);
             this.panel2.Controls.Add(this.txMainTextBox);
-            this.panel2.Location = new System.Drawing.Point(338, 115);
+            this.panel2.Location = new System.Drawing.Point(254, 93);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(649, 299);
+            this.panel2.Size = new System.Drawing.Size(487, 243);
             this.panel2.TabIndex = 11;
             // 
             // txCntConnected
@@ -102,10 +106,11 @@ namespace RCS_Main_APP
             this.txCntConnected.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txCntConnected.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txCntConnected.ForeColor = System.Drawing.Color.Black;
-            this.txCntConnected.Location = new System.Drawing.Point(3, -31);
+            this.txCntConnected.Location = new System.Drawing.Point(2, -25);
+            this.txCntConnected.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txCntConnected.Multiline = true;
             this.txCntConnected.Name = "txCntConnected";
-            this.txCntConnected.Size = new System.Drawing.Size(637, 37);
+            this.txCntConnected.Size = new System.Drawing.Size(478, 30);
             this.txCntConnected.TabIndex = 1;
             this.txCntConnected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -114,12 +119,13 @@ namespace RCS_Main_APP
             this.txMainTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.txMainTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txMainTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txMainTextBox.Location = new System.Drawing.Point(3, 42);
+            this.txMainTextBox.Location = new System.Drawing.Point(2, 34);
+            this.txMainTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txMainTextBox.Multiline = true;
             this.txMainTextBox.Name = "txMainTextBox";
             this.txMainTextBox.ReadOnly = true;
             this.txMainTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txMainTextBox.Size = new System.Drawing.Size(637, 257);
+            this.txMainTextBox.Size = new System.Drawing.Size(478, 209);
             this.txMainTextBox.TabIndex = 0;
             this.txMainTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -129,9 +135,10 @@ namespace RCS_Main_APP
             this.panel1.Controls.Add(this.btnStartMonitoring);
             this.panel1.Controls.Add(this.btnRobotSupport);
             this.panel1.Controls.Add(this.btnR4Support);
-            this.panel1.Location = new System.Drawing.Point(4, 77);
+            this.panel1.Location = new System.Drawing.Point(3, 63);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 368);
+            this.panel1.Size = new System.Drawing.Size(246, 299);
             this.panel1.TabIndex = 9;
             // 
             // btnStopMonitoring
@@ -142,12 +149,14 @@ namespace RCS_Main_APP
             this.btnStopMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStopMonitoring.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStopMonitoring.ForeColor = System.Drawing.Color.Black;
-            this.btnStopMonitoring.Location = new System.Drawing.Point(9, 313);
+            this.btnStopMonitoring.Location = new System.Drawing.Point(7, 254);
+            this.btnStopMonitoring.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStopMonitoring.Name = "btnStopMonitoring";
-            this.btnStopMonitoring.Size = new System.Drawing.Size(265, 40);
+            this.btnStopMonitoring.Size = new System.Drawing.Size(199, 32);
             this.btnStopMonitoring.TabIndex = 11;
             this.btnStopMonitoring.Text = "Stop - Monitoring is Off";
             this.btnStopMonitoring.UseVisualStyleBackColor = false;
+            this.btnStopMonitoring.Click += new System.EventHandler(this.btnStopMonitoring_Click);
             // 
             // btnStartMonitoring
             // 
@@ -157,9 +166,10 @@ namespace RCS_Main_APP
             this.btnStartMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartMonitoring.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStartMonitoring.ForeColor = System.Drawing.Color.Black;
-            this.btnStartMonitoring.Location = new System.Drawing.Point(9, 259);
+            this.btnStartMonitoring.Location = new System.Drawing.Point(7, 210);
+            this.btnStartMonitoring.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStartMonitoring.Name = "btnStartMonitoring";
-            this.btnStartMonitoring.Size = new System.Drawing.Size(265, 40);
+            this.btnStartMonitoring.Size = new System.Drawing.Size(199, 32);
             this.btnStartMonitoring.TabIndex = 5;
             this.btnStartMonitoring.Text = "Start - Monitoring is On";
             this.btnStartMonitoring.UseVisualStyleBackColor = false;
@@ -170,9 +180,10 @@ namespace RCS_Main_APP
             this.btnRobotSupport.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnRobotSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRobotSupport.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRobotSupport.Location = new System.Drawing.Point(13, 120);
+            this.btnRobotSupport.Location = new System.Drawing.Point(10, 98);
+            this.btnRobotSupport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRobotSupport.Name = "btnRobotSupport";
-            this.btnRobotSupport.Size = new System.Drawing.Size(300, 85);
+            this.btnRobotSupport.Size = new System.Drawing.Size(225, 69);
             this.btnRobotSupport.TabIndex = 9;
             this.btnRobotSupport.Text = "Request Robot Support";
             this.btnRobotSupport.UseVisualStyleBackColor = false;
@@ -184,9 +195,10 @@ namespace RCS_Main_APP
             this.btnR4Support.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnR4Support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnR4Support.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnR4Support.Location = new System.Drawing.Point(13, 7);
+            this.btnR4Support.Location = new System.Drawing.Point(10, 6);
+            this.btnR4Support.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnR4Support.Name = "btnR4Support";
-            this.btnR4Support.Size = new System.Drawing.Size(300, 85);
+            this.btnR4Support.Size = new System.Drawing.Size(225, 69);
             this.btnR4Support.TabIndex = 10;
             this.btnR4Support.Text = "Request R4 Support";
             this.btnR4Support.UseVisualStyleBackColor = false;
@@ -201,16 +213,18 @@ namespace RCS_Main_APP
             this.pnlMainTop.Controls.Add(this.lblExit);
             this.pnlMainTop.Controls.Add(this.lblRcsMain);
             this.pnlMainTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlMainTop.Name = "pnlMainTop";
-            this.pnlMainTop.Size = new System.Drawing.Size(981, 78);
+            this.pnlMainTop.Size = new System.Drawing.Size(736, 63);
             this.pnlMainTop.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -221,9 +235,10 @@ namespace RCS_Main_APP
             this.lblMinimize.AutoSize = true;
             this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimize.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMinimize.Location = new System.Drawing.Point(896, -3);
+            this.lblMinimize.Location = new System.Drawing.Point(672, -2);
+            this.lblMinimize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMinimize.Name = "lblMinimize";
-            this.lblMinimize.Size = new System.Drawing.Size(35, 48);
+            this.lblMinimize.Size = new System.Drawing.Size(29, 39);
             this.lblMinimize.TabIndex = 2;
             this.lblMinimize.Text = "-";
             this.lblMinimize.Visible = false;
@@ -235,9 +250,10 @@ namespace RCS_Main_APP
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Maroon;
-            this.lblExit.Location = new System.Drawing.Point(937, 0);
+            this.lblExit.Location = new System.Drawing.Point(703, 0);
+            this.lblExit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(41, 39);
+            this.lblExit.Size = new System.Drawing.Size(33, 31);
             this.lblExit.TabIndex = 1;
             this.lblExit.Text = "X";
             this.lblExit.Visible = false;
@@ -249,20 +265,22 @@ namespace RCS_Main_APP
             this.lblRcsMain.AutoSize = true;
             this.lblRcsMain.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRcsMain.ForeColor = System.Drawing.Color.Maroon;
-            this.lblRcsMain.Location = new System.Drawing.Point(433, 0);
+            this.lblRcsMain.Location = new System.Drawing.Point(325, 0);
+            this.lblRcsMain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRcsMain.Name = "lblRcsMain";
-            this.lblRcsMain.Size = new System.Drawing.Size(113, 62);
+            this.lblRcsMain.Size = new System.Drawing.Size(92, 51);
             this.lblRcsMain.TabIndex = 0;
             this.lblRcsMain.Text = "RCS";
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.ClientSize = new System.Drawing.Size(1005, 525);
+            this.ClientSize = new System.Drawing.Size(754, 427);
             this.Controls.Add(this.pnMainAll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

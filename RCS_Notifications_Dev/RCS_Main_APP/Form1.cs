@@ -148,18 +148,39 @@ namespace RCS_Main_APP
         }
         private void btnStartMonitoring_Click(object sender, EventArgs e)
         {
+            ControllerPresenter.ControllerSetUp();
             ehp.ProcessMonitoring();
             if (ehp.monitoringRunning)
             {
                 btnStartMonitoring.BackColor = Color.Green;
                 //btnStartMonitoring.Text = "Monitoring is running.";
+                txMainTextBox.Text = $"Controller Set up is completed successfully.";
                 txCntConnected.Text = "Monitoring process is started.";
-                txMainTextBox.Text = $"{newLine}Output from Monitoring Process";
+                txMainTextBox.Text += $"{newLine}Output from Monitoring Process";
                 btnStopMonitoring.BackColor = Color.Red;
             }
             else
             {
                 txCntConnected.Text = "Monitoring process is not running.";
+                btnStartMonitoring.BackColor = Color.Red;
+            }
+        }
+
+        private void btnStopMonitoring_Click(object sender, EventArgs e)
+        {
+
+            ControllerPresenter.DisableController();
+            if (ControllerPresenter.monitoringRunning != true)
+            {
+                btnStartMonitoring.BackColor = Color.Red;
+                //btnStartMonitoring.Text = "Monitoring is running.";
+                txMainTextBox.Text = $"Controller monitoring and set up is terminated.";
+                txCntConnected.Text = "Monitoring process is stopped.";
+                btnStopMonitoring.BackColor = Color.Green;
+            }
+            else
+            {
+                txCntConnected.Text = "Monitoring termination is rejected.";
                 btnStartMonitoring.BackColor = Color.Red;
             }
         }
